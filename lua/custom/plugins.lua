@@ -2,7 +2,7 @@ return function(use)
   use {
     'akinsho/toggleterm.nvim',
     config = function ()
-      require("toggleterm").setup()
+      require('toggleterm').setup()
     end
   }
 
@@ -56,9 +56,10 @@ return function(use)
   use {
     'rmagatti/auto-session',
     config = function()
-      require("auto-session").setup {
-        log_level = "error",
-        auto_session_suppress_dirs = { "~/", "~/projects", "~/Downloads", "/"},
+      require('auto-session').setup {
+        auto_session_suppress_dirs = { '~/', '~/projects', '~/Downloads', '/'},
+        log_level = 'error',
+        pre_save_cmds = { 'NvimTreeClose' },
       }
     end
   }
